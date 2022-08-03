@@ -12,8 +12,7 @@ jobs:
       - uses: actions/checkout@master
       - name: compile and release
         uses: wangyoucao577/go-release-action@v1.30
-        env:
-          binary_name: browser-switcher-linux-386
+        with:
           project_path: "src/browser-switcher"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goarch: "386"
@@ -27,8 +26,7 @@ jobs:
       - uses: actions/checkout@master
       - name: compile and release
         uses: wangyoucao577/go-release-action@v1.30
-        env:
-          binary_name: browser-switcher-linux-amd64
+        with:
           project_path: "src/browser-switcher"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goarch: "amd64"
@@ -42,8 +40,7 @@ jobs:
       - uses: actions/checkout@master
       - name: compile and release
         uses: wangyoucao577/go-release-action@v1.30
-        env:
-          binary_name: browser-switcher-linux-arm
+        with:
           project_path: "src/browser-switcher"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goarch: "arm"
@@ -57,8 +54,7 @@ jobs:
       - uses: actions/checkout@master
       - name: compile and release
         uses: wangyoucao577/go-release-action@v1.30
-        env:
-          binary_name: browser-switcher-linux-arm64
+        with:
           project_path: "src/browser-switcher"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goarch: "arm64"
